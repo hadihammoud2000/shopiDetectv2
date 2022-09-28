@@ -1,0 +1,100 @@
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+body{
+  font-family: Montserrat, sans-serif;
+  background-color: pink;
+ 
+}
+
+.logo, .middle{
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  }
+
+  .logo{
+    margin-top:-15rem;
+    padding: 10px;
+}
+
+  .logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+
+} 
+  h1{
+    font-size: clamp(16px, 5vw, 34px);
+    font-weight: bold;
+}
+
+
+
+  input {
+    margin: -3px;
+    padding: 0;
+    border: 1px solid black;
+    font-family: Montserrat, sans-serif;
+    height: 50px;
+    border-radius: 20px 20px 20px 20px;
+    padding-left: 5px;
+    width:100%;
+  }
+  button{
+    height: 50px;
+    border-left:0;
+  }
+
+
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    background-color: #fffdfd;
+    /* background-color: rgba(0,0,0, 0.9); */
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #818181;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+ 
