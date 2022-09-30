@@ -2,7 +2,7 @@ export const cytoscapeStylesheet = [
     {
       selector: "node",
       style: {
-        "background-color": "#F5F5DC",
+        "background-color": "#FFFFFF",
         width: "label",
         height: "label",
         padding: "20px",
@@ -34,6 +34,7 @@ export const cytoscapeStylesheet = [
         "curve-style": "unbundled-bezier",
         "taxi-direction": "rightward",
         "target-arrow-shape": "triangle",
+        
         // "line-style": 'straight',
         'width': 5
       }
