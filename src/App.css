@@ -35,6 +35,8 @@ body, html{
   .inputAndButton{
     display: flex;
     flex-direction: row;
+    margin-bottom: 40px;
+    margin-top: -20px
   }
 
   .logo{
@@ -208,26 +210,65 @@ body, html{
 
 
 
-.aboutTextDetails{
-  text-align: left;
-  height: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  background: white;
-  background-color: white;
-  background-size: cover;
-  font-size: 16px;
-}
+  .aboutTextDetails{
+    text-align: left;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    background-color: white;
+    background-size: cover;
+    font-size: 16px;
+  }
 
-.middle{
-  width: 80%;
-}
-.submitButton{
-  width: 30%;
-}
-#inputURL{
-  width:70%;
-}
+  .middle{
+    width: 80%;
+    display: grid;
+  }
+  .submitButton{
+    width: 30%;
+  }
+  #inputURL{
+    width:70%;
+    margin-bottom: 120px;
+  }
 
   
+}
+.fullOutput{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -200px;
+  transition:opacity ease-in-out;
+
+
+
+}
+
+.fade-in {
+  transition: opacity 1s ease;  
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+
+.outputLogo{
+  position: absolute;
+  width: 20%;
+
+ 
+}
+
+
+
+#outputText{
+  position: absolute;
+margin-bottom: -230px;
+  color: white;
+
 }
