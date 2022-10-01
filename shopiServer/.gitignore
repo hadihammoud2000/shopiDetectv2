@@ -158,6 +158,7 @@ env.bak/
 venv.bak/
 shopiServerApp/__pycache__
 
+shopiServerApp/.env
 
 shopidetect/
 
