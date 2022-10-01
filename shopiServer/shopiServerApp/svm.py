@@ -4,11 +4,34 @@ from urllib.parse import urlparse
 
 import  tldextract
 import ipaddress as ip
+import requests
+
+
+
+
+
+def turnToFullUrl(url):
+  if "https://" in url or "http://" in url:
+    return url
+  tempURL = "http://" + url
+  dummyResponse = requests.get(tempURL)
+
+  if len(dummyResponse.history)>0:
+    print("in")
+    return dummyResponse.url
+
+  return tempURL
+
+print(turnToFullUrl("www.amazon.com"))
+  
 
 def createColumnsList(url, trainORno, target):
+  print(str(url))
   #protocol://thirdLevelDomain.secondLevelDomain.topLevelDomain/directory/fileOrPage
   #thirdLevelDomain = subdomainName; secondLevelDomain + topLevelDomain = domainName; subdomainName + domainName = hostName; directory + fileOrPage = path
-  url = str(url)
+  url = turnToFullUrl(str(url))
+
+  print(url)
   columnsList = []
   parsedURL = urlparse(url)
   #scheme://netloc/path;parameters?query#fragment

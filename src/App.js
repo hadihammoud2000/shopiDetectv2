@@ -1,7 +1,7 @@
 import './App.css';
 import * as React from 'react';
 import OutputDisplay from './OutputDisplay';
-import { Fade } from '@mui/material';
+import { CSSTransition } from "react-transition-group";
 
 var SERVER_URL = "http://127.0.0.1:8000/check"
 const FADE_DURATION = 1000;
@@ -61,9 +61,14 @@ fadeState: false};
             <input type="submit" value="Go" className="submitButton"/>
         </form>
         {this.state.output!==null &&
-
-        <OutputDisplay output={this.state.output}/>
-
+      <CSSTransition
+          in={this.state.fadeState}
+          appear={true}
+          timeout={1000}
+          classNames="fade"
+      >
+        <OutputDisplay output={this.state.output} className="fade-in"/>
+        </CSSTransition>
         }
         </div>
         
