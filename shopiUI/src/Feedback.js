@@ -11,7 +11,7 @@ import FormGroup from "@mui/material/FormGroup"
 import "./App.css"
 
 
-var SERVER_URL = "http://127.0.0.1:8000"
+const SERVER_URL = process.env.REACT_APP_API_URI;
 
 export default function Feedback() {
   const [open, setOpen] = React.useState(false);
@@ -70,6 +70,7 @@ function handleCheck(checked){
   return (
     <div>
       <Button onClick={handleClickOpen}
+      className="feedbackButton"
       sx={{
         position: "absolute",
         top: 0,

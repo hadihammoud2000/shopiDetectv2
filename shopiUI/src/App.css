@@ -178,7 +178,12 @@ body, html{
   align-items: center;
   gap: 10px;
 }
-
+.feedbackButton{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: black;
+}
 
 @media screen and (max-width: 500px) {
   
@@ -227,11 +232,16 @@ body, html{
   }
   .submitButton{
     width: 30%;
+    color: black;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    padding-left: 5px;
   }
   #inputURL{
     width:70%;
     margin-bottom: 120px;
   }
+
 
   
 }
@@ -294,13 +304,14 @@ opacity: 0;
 }
 
 a:visited, a:active {
-  color: lightblue;
+  color: rgb(15, 177, 231);
 }
 
 
-.feedbackButton{
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-}
+      /* sx={{
+        position: "absolute",
+        top: 0,
+        right: 0,
+        color: "white",
+        fontFamily: 'Montserrat'
+      }} */
