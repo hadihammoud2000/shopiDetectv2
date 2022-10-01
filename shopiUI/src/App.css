@@ -1,0 +1,317 @@
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
+
+
+body, html{
+  font-family: Montserrat, sans-serif;
+  background-image: url('./assets/shopiBackground.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  margin: 0;
+ 
+}
+
+
+.logo, .middle{
+  position: absolute;
+  display: grid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  }
+
+  .middle{
+    width: 50%;
+  }
+
+  .inputAndButton{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    margin-top: -20px
+  }
+
+  .logo{
+    margin-top:-15rem;
+    padding: 10px;
+}
+
+/* .centered {
+  max-width: 100%;
+  max-height: 100%;
+} */
+
+  .logo img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+
+} 
+  h1{
+    font-size: clamp(16px, 5vw, 34px);
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+}
+
+
+
+  #inputURL {
+    padding: 0;
+    border: 1px solid black;
+    font-family: Montserrat, sans-serif;
+    height: 50px;
+    border-radius: 20px 0px 0px 20px;
+    padding-left: 5px;
+    width: 90%;
+
+  }
+
+
+  .submitButton{
+    border: 1px solid black;
+    font-family: Montserrat, sans-serif;
+    height: 52px;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    padding-left: 5px;
+    width: 10%;
+  }
+
+
+
+
+
+
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    background-color: #fffdfd;
+    /* background-color: rgba(0,0,0, 0.9); */
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #818181;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .Divider{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+  }
+  
+  .cytoGraph{
+    overflow: hidden;
+    width: 60%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .aboutText{
+    float: left;
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    background: white;
+    background-color: white;
+    /* box-shadow: 10px 10px 5px 12px black; */
+    font-size: 18px;
+
+  }
+
+  .headerMain{
+    color: white;
+  }
+
+.aboutTextDetails{
+  text-align: left;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: white;
+  background-color: white;
+  background-size: cover;
+}
+
+.upperBar{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.feedbackButton{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: black;
+}
+
+@media screen and (max-width: 500px) {
+  
+  .Divider{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    
+
+  }
+  
+  .cytoGraph{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display:none;
+  }
+
+  .aboutText{
+    width: 100%;
+    text-align: center;
+    background: white;
+    background-color: white;
+    /* box-shadow: 10px 10px 5px 12px black; */
+    font-size: 16px;
+    background-size: cover;
+
+  }
+
+
+
+  .aboutTextDetails{
+    text-align: left;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    background-color: white;
+    background-size: cover;
+    font-size: 16px;
+  }
+
+  .middle{
+    width: 80%;
+    display: grid;
+  }
+  .submitButton{
+    width: 30%;
+    color: black;
+    background-color: white;
+    border-radius: 0px 20px 20px 0px;
+    padding-left: 5px;
+  }
+  #inputURL{
+    width:70%;
+    margin-bottom: 120px;
+  }
+
+
+  
+}
+.fullOutput{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -200px;
+
+
+
+}
+
+
+.outputLogo{
+  position: absolute;
+  width: 18%;
+
+ 
+}
+
+
+
+#outputText{
+  position: absolute;
+margin-bottom: -240px;
+  color: white;
+
+}
+
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear.fade-appear-active {
+opacity: 1;
+transition: opacity 1000ms linear;
+}
+
+.fade-enter {
+opacity: 0;
+z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms linear 5000ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 5000ms linear;
+}
+.fade-exit-done {
+opacity: 0;
+}
+
+a:visited, a:active {
+  color: rgb(15, 177, 231);
+}
+
+
+      /* sx={{
+        position: "absolute",
+        top: 0,
+        right: 0,
+        color: "white",
+        fontFamily: 'Montserrat'
+      }} */

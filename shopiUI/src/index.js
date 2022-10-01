@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LogoBuilder from './logoBuilder';
-import Overlay from './overlay';
 import FullScreenDialog from './FullScreenDialog';
-
+import App from './App';
+import Feedback from './Feedback';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
     <FullScreenDialog/>
+    <Feedback/>
     <LogoBuilder/>
     <App />
   </React.StrictMode>
