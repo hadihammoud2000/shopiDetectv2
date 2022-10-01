@@ -3,9 +3,7 @@ import * as React from 'react';
 import OutputDisplay from './OutputDisplay';
 import { CSSTransition } from "react-transition-group";
 
-var SERVER_URL = "http://127.0.0.1:8000"
-const FADE_DURATION = 1000;
-
+const SERVER_URL = process.env.REACT_APP_API_URI;
 
 export default class App extends React.Component {
 
