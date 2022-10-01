@@ -5,11 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import LogoBuilder from './logoBuilder';
 import FullScreenDialog from './FullScreenDialog';
 import App from './App';
+import Feedback from './Feedback';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
     <FullScreenDialog/>
+    <Feedback/>
     <LogoBuilder/>
     <App />
   </React.StrictMode>

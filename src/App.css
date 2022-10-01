@@ -35,6 +35,8 @@ body, html{
   .inputAndButton{
     display: flex;
     flex-direction: row;
+    margin-bottom: 40px;
+    margin-top: -20px
   }
 
   .logo{
@@ -208,26 +210,97 @@ body, html{
 
 
 
-.aboutTextDetails{
-  text-align: left;
-  height: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  background: white;
-  background-color: white;
-  background-size: cover;
-  font-size: 16px;
-}
+  .aboutTextDetails{
+    text-align: left;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    background-color: white;
+    background-size: cover;
+    font-size: 16px;
+  }
 
-.middle{
-  width: 80%;
-}
-.submitButton{
-  width: 30%;
-}
-#inputURL{
-  width:70%;
-}
+  .middle{
+    width: 80%;
+    display: grid;
+  }
+  .submitButton{
+    width: 30%;
+  }
+  #inputURL{
+    width:70%;
+    margin-bottom: 120px;
+  }
 
   
+}
+.fullOutput{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -200px;
+
+
+
+}
+
+
+.outputLogo{
+  position: absolute;
+  width: 18%;
+
+ 
+}
+
+
+
+#outputText{
+  position: absolute;
+margin-bottom: -240px;
+  color: white;
+
+}
+
+.fade-appear {
+  opacity: 0;
+  z-index: 1;
+}
+.fade-appear.fade-appear-active {
+opacity: 1;
+transition: opacity 1000ms linear;
+}
+
+.fade-enter {
+opacity: 0;
+z-index: 1;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 5000ms linear 5000ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 5000ms linear;
+}
+.fade-exit-done {
+opacity: 0;
+}
+
+a:visited, a:active {
+  color: lightblue;
+}
+
+
+.feedbackButton{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
 }
