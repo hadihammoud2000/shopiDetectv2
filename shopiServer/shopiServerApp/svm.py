@@ -14,7 +14,10 @@ def turnToFullUrl(url):
   if "https://" in url or "http://" in url:
     return url
   tempURL = "http://" + url
-  dummyResponse = requests.get(tempURL)
+  try:
+    dummyResponse = requests.get(tempURL)
+  except:
+    return tempURL
 
   if len(dummyResponse.history)>0:
     print("in")
@@ -22,7 +25,6 @@ def turnToFullUrl(url):
 
   return tempURL
 
-print(turnToFullUrl("www.amazon.com"))
   
 
 def createColumnsList(url, trainORno, target):

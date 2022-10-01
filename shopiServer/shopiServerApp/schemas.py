@@ -21,3 +21,9 @@ class URL(URLBase):
     class Config:
         orm_mode = True
 
+class URLFeedbackResponse(BaseModel):
+    url:str
+    feedback: Optional[int]
+
+    class Config:
+        orm_mode = True

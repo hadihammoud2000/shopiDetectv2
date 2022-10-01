@@ -30,14 +30,7 @@ def get_db():
 # @app.on_event('startup')
 # async def load_model(svm):
 
-origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
-    "http://localhost",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "http://127.0.0.1:3000",
-]
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -64,3 +57,9 @@ async def add_URL(url: schemas.URLBase, db: Session = Depends(get_db)):
     checkedUrl = crud.add_url(db = db, url = url, output = int(y_Predict[0]))
     
     return checkedUrl
+
+
+
+@app.post("/feedback",response_model=schemas.URLFeedbackResponse)
+async def feedback_URL(url: schemas.URLFeedbackResponse, db: Session = Depends(get_db)):
+    return crud.feedback_url(db=db,url=url, feedback = url.feedback)

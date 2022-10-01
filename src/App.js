@@ -3,7 +3,7 @@ import * as React from 'react';
 import OutputDisplay from './OutputDisplay';
 import { CSSTransition } from "react-transition-group";
 
-var SERVER_URL = "http://127.0.0.1:8000/check"
+var SERVER_URL = "http://127.0.0.1:8000"
 const FADE_DURATION = 1000;
 
 
@@ -31,7 +31,7 @@ fadeState: false};
     event.preventDefault();
     var bodyJSON = {url: this.state.value}
     console.log(this.state.value)
-    const response = await fetch(SERVER_URL, {
+    const response = await fetch(`${SERVER_URL}/check`, {
 
       method: 'POST',
       headers: {

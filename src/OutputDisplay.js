@@ -15,7 +15,9 @@ export default function OutputDisplay(props){
                         <img src={yes}></img> 
                     </div>
       
-                    <h1 id = "outputText">Shopi thinks it's safe!</h1>
+                    <h1 id = "outputText">Shopi thinks it's safe! <br></br> <span style={{color: "#FFFFFF", fontSize: "20px"}}> Think he's mistaken? Correct him in the top right corner!</span></h1>
+                    
+
                 </div>
                 );
             }
@@ -26,8 +28,8 @@ export default function OutputDisplay(props){
                    <div className='outputLogo'> 
                        <img src={no}></img> 
                    </div>
-                   <h1 id = "outputText">Shopi thinks it's phishy!</h1>
-               </div>
+                   <h1 id = "outputText">Shopi thinks it's phishy! <br></br>
+                   <span style={{color: "#FFFFFF", fontSize: "20px"}}> Think he's mistaken? Correct him in the top right corner!</span> </h1></div>
                );
 
     }
